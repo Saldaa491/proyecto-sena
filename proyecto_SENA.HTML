@@ -1,0 +1,181 @@
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MotoRuta - Motos Usadas y Seguros</title>
+        <link rel="stylesheet" href="proyecto_SENA.CSS">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <h1><i class="fas fa-motorcycle"></i> MotoRuta</h1>
+                <p>Compra, Venta y Seguros de Motos Certificadas</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#inicio"><i class="fas fa-home"></i> Inicio</a></li>
+                    <li><a href="#motos"><i class="fas fa-list"></i> Catálogo</a></li>
+                    <li><a href="#seguros"><i class="fas fa-shield-alt"></i> Seguros</a></li>
+                    <li><a href="#nosotros"><i class="fas fa-info-circle"></i> Nosotros</a></li>
+                    <li><a href="#contacto"><i class="fas fa-phone"></i> Contacto</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main id="inicio">
+            <section class="banner" style="background-image: url('IMAGENES/AKT-SCORT-250.jpg');"></section>
+                <div class="banner-content">
+                    <h2>Tu próxima moto te espera</h2>
+                    <p>Financiamiento y seguros incluidos</p>
+                    <div class="search-container">
+                        <input type="text" id="searchInput" placeholder="Buscar por modelo...">
+                        <button id="searchBtn"><i class="fas fa-search"></i></button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección de Catálogo -->
+            <section id="motos" class="galeria">
+                <h2><i class="fas fa-bars"></i> Nuestro Catálogo</h2>
+                <div class="filtros">
+                    <button class="filtro-btn active" data-marca="todos">Todos</button>
+                    <button class="filtro-btn" data-marca="honda">Honda</button>
+                    <button class="filtro-btn" data-marca="suzuki">Suzuki</button>
+                    <button class="filtro-btn" data-marca="bajaj">Bajaj</button>
+                    <button class="filtro-btn" data-marca="akt">AKT</button>
+                </div>
+                <div class="grid-motos" id="gridMotos"></div>
+            </section>
+
+            <!-- Nueva Sección de Seguros -->
+            <section id="seguros" class="seguros-section">
+                <div class="seguros-container">
+                    <h2><i class="fas fa-shield-alt"></i> Seguros para tu Moto</h2>
+                    <div class="seguros-grid">
+                        <div class="seguro-card">
+                            <i class="fas fa-car-crash"></i>
+                            <h3>Seguro Todo Riesgo</h3>
+                            <p>Cobertura completa contra accidentes, robos y daños naturales</p>
+                            <span class="precio">Desde $150.000/mes</span>
+                        </div>
+                        <div class="seguro-card">
+                            <i class="fas fa-lock"></i>
+                            <h3>Seguro Contra Robo</h3>
+                            <p>Protección especializada contra hurto y robo de tu moto</p>
+                            <span class="precio">Desde $90.000/mes</span>
+                        </div>
+                        <div class="seguro-card">
+                            <i class="fas fa-user-shield"></i>
+                            <h3>Seguro SOAT</h3>
+                            <p>Cumple con la ley y protege a terceros en accidentes</p>
+                            <span class="precio">Desde $50.000/mes</span>
+                        </div>
+                    </div>
+                    <button class="cotizar-btn" id="cotizarSeguro">
+                        <i class="fas fa-phone"></i> Cotizar Seguro Ahora: 310 4631447
+                    </button>
+                </div>
+            </section>
+
+            <!-- Nueva Sección de Registro -->
+            <section class="registro-section">
+                <div class="registro-container">
+                    <h2><i class="fas fa-phone-volume"></i> ¿Quieres que te llamemos?</h2>
+                    <form id="registroForm">
+                        <div class="form-group">
+                            <input type="text" id="nombre" placeholder="Tu nombre completo" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="telefono" placeholder="Tu número de teléfono" required>
+                        </div>
+                        <div class="form-group">
+                            <select id="interes" required>
+                                <option value="" disabled selected>¿Qué te interesa?</option>
+                                <option value="moto">Comprar una moto</option>
+                                <option value="seguro">Cotizar un seguro</option>
+                                <option value="revision">Revisión técnica</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="enviar-btn">Enviar Solicitud</button>
+                    </form>
+                </div>
+            </section>
+
+            <!-- Nueva Sección Nosotros -->
+            <section id="nosotros" class="nosotros-section">
+                <div class="nosotros-container">
+                    <div class="mision-vision">
+                        <div class="card">
+                            <h3><i class="fas fa-bullseye"></i> Nuestra Misión</h3>
+                            <p>Ofrecer motocicletas de calidad con procesos transparentes y seguros integrales que brinden tranquilidad a nuestros clientes en Colombia.</p>
+                        </div>
+                        <div class="card">
+                            <h3><i class="fas fa-eye"></i> Nuestra Visión</h3>
+                            <p>Ser líderes en el mercado de motos usadas certificadas y seguros para motociclistas, con cobertura nacional y servicio personalizado.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="sucursales">
+                        <h3><i class="fas fa-store"></i> Nuestras Sucursales</h3>
+                        <div class="sucursales-grid">
+                            <div class="sucursal">
+                                <h4>Medellín</h4>
+                                <p><i class="fas fa-map-marker-alt"></i> Cl. 50 #42-35, Centro</p>
+                                <p><i class="fas fa-phone"></i> 604 444 5555</p>
+                            </div>
+                            <div class="sucursal">
+                                <h4>Bogotá</h4>
+                                <p><i class="fas fa-map-marker-alt"></i> Cra. 15 #93-75, Chapinero</p>
+                                <p><i class="fas fa-phone"></i> 601 765 4321</p>
+                            </div>
+                            <div class="sucursal">
+                                <h4>Cali</h4>
+                                <p><i class="fas fa-map-marker-alt"></i> Av. 6N #15-20, Granada</p>
+                                <p><i class="fas fa-phone"></i> 602 333 4444</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer id="contacto">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-map-marker-alt"></i> Ubicación Principal</h3>
+                    <p>Medellín, Colombia</p>
+                    <p>Cra. 43A #7-50, Poblado</p>
+                </div>
+                <div class="footer-section">
+                    <h3><i class="fas fa-phone"></i> Contacto Directo</h3>
+                    <p><i class="fab fa-whatsapp"></i> WhatsApp: +57 310 4631447</p>
+                    <p><i class="fas fa-phone"></i> Teléfono: 604 123 4567</p>
+                    <p><i class="fas fa-envelope"></i> Email: info@motoruta.com</p>
+                </div>
+                <div class="footer-section">
+                    <h3><i class="fas fa-clock"></i> Horario</h3>
+                    <p>Lun-Vie: 8am - 6pm</p>
+                    <p>Sáb: 9am - 2pm</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2024 MotoRuta | Todos los derechos reservados</p>
+            </div>
+        </footer>
+
+        <!-- Botón flotante de WhatsApp -->
+        <a href="https://wa.me/573104631447" class="whatsapp-float" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+
+        <script src="proyecto_SENA.JS"></script>
+    </body>
+    </html>
